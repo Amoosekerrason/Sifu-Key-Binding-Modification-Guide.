@@ -36,7 +36,7 @@ to **Back → Front + Xbox’s B button**.
 
 ## Reflection
 
-I initially tried modifying the **Generic-type `InputData`** referenced by `m_InputData` in `DefaultGamepad_Gameplay` — even directly editing `AttackLightFrontFront` under `/Inputs` — but none of it had any effect.
+I initially tried modifying the **Generic-type `InputData`** referenced by `m_InputData` in `DefaultGamepad_Gameplay` — even directly editing `AttackLightFrontFront` under `/Inputs` — but none of it had any effect.(However, modifying the file for the generic type did successfully break the action lol.)
 
 No matter how I changed those, the original input logic *(Front, Front, X)* stayed intact.
 
