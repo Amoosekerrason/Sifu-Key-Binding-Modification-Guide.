@@ -44,4 +44,8 @@ After rolling back and inspecting `DefaultGamepad_Gameplay` again, I realized th
 
 By comparing these two files side-by-side, I was finally able to trace the entire input flow and fix it.
 
-⚠️ **Note:** If you try to force an unrelated preset (e.g. `TakedownValidation2` from `DefaultGamepad_Gameplay`) directly into Slot 2, the game will throw a **Violation error** at startup.
+⚠️ **Note:** 
+
+If you try to force an unrelated preset (e.g. `TakedownValidation2` from `DefaultGamepad_Gameplay`) directly into Slot 2, the game will throw a **Violation error** at startup.
+
+I tried replacing the reference to the original InputData in DefaultGamepad_Gameplay with a copied GenericTypeInputData, but doing so caused the actions to stop working. I haven’t been able to figure out the reason why.
