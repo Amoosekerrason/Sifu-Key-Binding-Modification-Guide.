@@ -49,3 +49,5 @@ By comparing these two files side-by-side, I was finally able to trace the entir
 If you try to force an unrelated preset (e.g. `TakedownValidation2` from `DefaultGamepad_Gameplay`) directly into Slot 2, the game will throw a **Violation error** at startup.
 
 I tried replacing the reference to the original InputData in DefaultGamepad_Gameplay with a copied GenericTypeInputData, but doing so caused the actions to stop working. I haven’t been able to figure out the reason why.
+
+Since during the successful process I only modified the data in the mapping, I’m guessing that the mapping is what the system actually takes as input, and that these inputs are treated as some kind of InputData. This would explain why, even when I changed the order of the mapping entries, the corresponding InputData still worked.
